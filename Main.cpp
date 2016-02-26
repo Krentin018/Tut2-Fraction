@@ -49,6 +49,14 @@ Fractions Fractions::multiply(Fractions &a)
 	return ans;
 }
 
+Fractions Fractions::divide(Fractions &a)
+{
+	ans.numer = numer * a.denom;
+	ans.denom = denom * a.numer;
+	return ans;
+}
+
+
 
 int main()
 {
@@ -72,5 +80,7 @@ int main()
 	result = one.multiply(two);
 	result.print();
 
+	result = one.divide(two);
+	result.print();
 }
 
