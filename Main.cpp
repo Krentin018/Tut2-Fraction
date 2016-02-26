@@ -3,37 +3,55 @@
 
 using namespace std;
 
+Fractions ans;
+
 Fractions Input()
 {
-	Fractions temp;
-	int num;
+	Fractions frac;
+	int temp;
 	cout << "Enter numerator" << endl;
-	cin >> num;
-	temp.setNumer(num);
+	cin >> temp;
+	frac.setNumer(temp);
 
 	InvalidDenom:                         // label
 	cout << "Enter denominator" << endl;
-	cin >> num;
+	cin >> temp;
 
-	if (num == 0)
+	if (temp == 0)
 	{
 		cout << "Denominator can't be 0" << endl;
 		goto InvalidDenom;
 	}
 
-	temp.setDenom(num);
+	frac.setDenom(temp);
 
-	return temp;
+	return frac;
 }
 
+Fractions Fractions::add(Fractions &a)
+{
+	ans.numer = numer * a.denom + a.numer * denom;
+	ans.denom = denom * a.denom;
+	return ans;
+}
 
 int main()
 {
 
 	Fractions one;
 	Fractions two;
+	Fractions result;
 
+	cout << "First fraction" << endl;
 	one = Input();
-	one.print();
+
+	cout << "Second fraction" << endl;
+	two = Input();
+
+	result = one.add(two);
+	result.print();
+
+
+
 }
 
