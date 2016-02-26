@@ -35,6 +35,21 @@ Fractions Fractions::add(Fractions &a)
 	return ans;
 }
 
+Fractions Fractions::subtract(Fractions &a)
+{
+	ans.numer = numer * a.denom - a.numer * denom;
+	ans.denom = denom * a.denom;
+	return ans;
+}
+
+Fractions Fractions::multiply(Fractions &a)
+{
+	ans.numer = numer * a.numer;
+	ans.denom = denom * a.denom;
+	return ans;
+}
+
+
 int main()
 {
 
@@ -51,7 +66,11 @@ int main()
 	result = one.add(two);
 	result.print();
 
+	result = one.subtract(two);
+	result.print();
 
+	result = one.multiply(two);
+	result.print();
 
 }
 

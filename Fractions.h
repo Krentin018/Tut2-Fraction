@@ -11,7 +11,10 @@ public:
 	
 	void setNumer(int);
 	void setDenom(int);
+
 	Fractions Fractions::add(Fractions &a);
+	Fractions Fractions::subtract(Fractions &a);
+	Fractions Fractions::multiply(Fractions &a);
 
 	void print();
 };
