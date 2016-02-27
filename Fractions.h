@@ -16,7 +16,8 @@ public:
 	Fractions Fractions::subtract(Fractions &a);
 	Fractions Fractions::multiply(Fractions &a);
 	Fractions Fractions::divide(Fractions &a);
-
+	
+	void mixed();
 	void print();
 };
 

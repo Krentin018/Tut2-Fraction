@@ -28,15 +28,42 @@ void Fractions::setDenom(int den)
 	denom = den;
 }
 
-void Fractions::print()
+int gcd(int a, int b)
 {
-	if (numer == 0)
+	if (b == 0)
 	{
-		cout << "0" << endl;
+		return a;
 	}
 	else
 	{
-		cout << numer << "/" << denom << endl;
+		return gcd(b, a % b);
 	}
+}
+
+void Fractions::print()
+{
+	//if (numer < denom)
+	//{
+	int tem = gcd(numer, denom);
+	numer = numer/tem;
+	denom = denom / tem;
+		if (numer == 0)
+		{
+			cout << "0" << endl;
+		}
+		else
+		{
+			cout << numer << "/" << denom << endl;
+		}
+	//}
+}
+
+
+
+void Fractions::mixed()
+{
+
+	//return gcd(numer, denom);
 
 }
+
