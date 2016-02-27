@@ -42,28 +42,34 @@ int gcd(int a, int b)
 
 void Fractions::print()
 {
-	//if (numer < denom)
-	//{
-	int tem = gcd(numer, denom);
-	numer = numer/tem;
-	denom = denom / tem;
+	int whole;
+	int temp = gcd(numer, denom);
+	numer = numer / temp;
+	denom = denom / temp;
+
+	if (numer < denom)
+	{
 		if (numer == 0)
 		{
-			cout << "0" << endl;
+			cout << "0\n" << endl;
 		}
 		else
 		{
-			cout << numer << "/" << denom << endl;
+			cout << numer << "/" << denom <<"\n"<< endl;
 		}
-	//}
+	}
+	else
+	{
+		if (numer % denom == 0)
+		{
+			cout << numer / denom << "\n" << endl;
+		}
+		else
+		{
+			whole = (int)(numer / denom);
+			numer = numer - (whole * denom);
+
+			cout << whole << " " << numer << "/" << denom << "\n" << endl;
+		}
+	}
 }
-
-
-
-void Fractions::mixed()
-{
-
-	//return gcd(numer, denom);
-
-}
-

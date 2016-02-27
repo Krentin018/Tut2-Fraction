@@ -71,15 +71,20 @@ int main()
 	cout << "Second fraction" << endl;
 	two = Input();
 
+
+	cout << "A + B" << endl;
 	result = one.add(two);
 	result.print();
 
+	cout << "A - B" << endl;
 	result = one.subtract(two);
 	result.print();
 
+	cout << "A * B" << endl;
 	result = one.multiply(two);
 	result.print();
 
+	cout << "A / B" << endl;
 	result = one.divide(two);
 	result.print();
 }
