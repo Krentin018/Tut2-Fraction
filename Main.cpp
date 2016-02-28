@@ -1,3 +1,7 @@
+/*Krentin Naidoo(214503232)
+Computer Methods 3
+Tut 2 - Fraction*/
+
 #include <iostream>
 #include "Fractions.h"
 
