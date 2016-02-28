@@ -47,7 +47,7 @@ void Fractions::print()
 	numer = numer / temp;
 	denom = denom / temp;
 
-	if (numer < denom)
+	if (abs(numer) < abs(denom))
 	{
 		if (numer == 0)
 		{
